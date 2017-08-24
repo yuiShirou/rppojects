@@ -1,7 +1,7 @@
 /* yuiShirou MMXVII */ 
 import java.util.Scanner;
  
-class MultiplicationTableSingle{  
+class MultiplicationTableSingleColumnVariableLength{  
 	public static void main(String args[]){  
 	    int j = 0;
 	    int i = 0;
