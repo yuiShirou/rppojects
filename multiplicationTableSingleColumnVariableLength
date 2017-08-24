@@ -1,0 +1,30 @@
+/* yuiShirou MMXVII */ 
+import java.util.Scanner;
+ 
+class MultiplicationTableSingle{  
+	public static void main(String args[]){  
+	    int j = 0;
+	    int i = 0;
+	    Scanner in = new Scanner(System.in);
+	    System.out.println(); // newline
+	    System.out.println("HELLO! This is a simple multiplication table.");
+	    System.out.println("note: length must be positive!");
+	    System.out.println(); // newline
+	    while(i <= 0){ //loop till the input is more than 0
+    		System.out.print("Enter multiplier: ");
+            j = in.nextInt(); //get the size of table
+            
+            System.out.print("Enter length: ");
+            i = in.nextInt(); //get the size of table
+	    }
+	    System.out.println("dreaming rainbows... ");
+	    System.out.println(); // newline
+	    for(int y = 1; y <= i; y++){ //loop the y axis until length
+	        int product = y*j; //multiply y axis by x axis position
+	        System.out.print( j + " x "+ y +" = "+product); // print out the product of y and j
+	        System.out.println(); // newline
+	    }
+	    System.out.println();
+	    System.out.println("results printed.");
+	}  
+}  
