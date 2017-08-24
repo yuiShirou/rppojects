@@ -1,7 +1,7 @@
 /* yuiShirou MMXVII */ 
 import java.util.Scanner;
  
-class MultiplicationTable{  
+class MultiplicationTableVariableGridSize{  
 	public static void main(String args[]){  
 	    int j = 0;
 	    while(j <= 0){ //loop till the input is more than 0
