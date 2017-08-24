@@ -1,0 +1,39 @@
+/* yuiShirou MMXVII */ 
+import java.util.Scanner;
+ 
+class MultiplicationTable{  
+	public static void main(String args[]){  
+	    int j = 0;
+	    while(j <= 0){ //loop till the input is more than 0
+    		System.out.println("Enter the size of the multiplication table:");
+    		System.out.println("\033[3m(9 for 9x9, 10 for 10x10, etc. | <= 0 are forbidden)\033[0m");
+            Scanner in = new Scanner(System.in);
+            j = in.nextInt(); //get the size of table
+	    }
+        System.out.println("Generating multiplication table of "+j+"x"+j+"...");
+        int maxvaluelength = (int)(Math.log10(j*j)+1); //get the length of max val (input x input)
+	    for(int y = 1; y <= j; y++){ //loop the y axis
+	        for(int x = 1; x <= j; x++){ //loop the x axis
+	            int product = y*x; //multiply y axis by x axis position
+	            
+	            /* thes next lines are just for aesthetics only, printing numbers in same lenght using spacers */
+	            /* you can completly remove this region and the code will sill work */
+	            int curvallength = (int)(Math.log10(product)+1); //get current product length
+	            int lengthdiff = maxvaluelength - curvallength; //calculate spacer
+	            if(lengthdiff > 0 ){ //if spacer > 0
+	                if( x >= 1){ //if spacer is > 1
+	                    for(int spacercount = 1; spacercount <= lengthdiff; spacercount++){ // loop thought the need spacer
+        	                System.out.print(' '); // print spacer in line
+        	            }
+	                }
+    	        }
+	            System.out.print(y*x); // print out the product of x and y
+	            if( x != j){ //if not end of table
+	                System.out.print(" | "); // print middle border
+	            }
+	        }
+	        System.out.println(); // newline
+	    }
+	    System.out.println("Table generated.");
+	}  
+}  
